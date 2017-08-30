@@ -1,0 +1,52 @@
+/*底部*/
+.footer{
+	background: #23282a;
+	height: 130px;
+	line-height: 130px;
+	color: #999a9a;
+	font-size: 12px;
+}
+/*版权声明*/
+.copyright{
+	float: left;
+}
+/*联系方式*/
+.contact{
+	float: right;
+}
+.service,.phone{
+	position: relative;
+	float: left;
+	margin-left: 56px;
+	color: #dbdbdc;
+	font-size: 14px;
+}
+.service a{
+	color: #dbdbdc;
+}
+/*电话*/
+.phone{
+	font-weight: 700;
+}
+/*在线客服*/
+.service{
+	text-decoration: underline;
+}
+/*小图标*/
+.contact i{
+	position: absolute;
+	background: url(../image/sprite.png) no-repeat;
+	top: 56px;
+}
+.service i{	
+	left: -31px;
+	background-position: 0 0;
+	width: 17px;
+	height: 17px;
+}
+.phone i{
+	width: 15px;
+	height: 15px;
+	left: -24px;
+	background-position: -19px 0;
+}

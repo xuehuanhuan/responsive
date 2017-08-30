@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>响应式开发</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/header.css">
+	<link rel="stylesheet" href="css/public.css">
+	<link rel="stylesheet" href="css/footer.css">
+	<script src="js/jquery-2.1.1.min.js"></script>
+	<script src="js/public.js"></script>
+	<style>
+		@media screen and (min-width:0px) and (max-width: 750px){
+		    .center{margin:0 auto;width: 690px;}
+		    .head .right>ul{display: none;}
+		    .head .active{display: none}
+		    .head .right{cursor: pointer;margin: 33px 0 0 0;width: 30px;height: 28px;float: right;background: url(image/sprite.png) no-repeat;background-position: 0 -17px;}
+		    .bannerbox .center{height: 460px;}
+		    .bannerbox .title{padding-top: 124px;}
+		    .banner{width:750px;position:absolute;left:50%;margin-left:-375px;}
+			.course{padding-bottom: 0;}
+			.subCon{width: 689px;height: 711px;margin-bottom: 20px;}
+			.describe{overflow: hidden;}
+			.subCon .left{width: 689px;margin: 0;margin-top:30px;}
+			.subCon .right{position: relative;float: left;width: 689px;height: 312px;color: #666;font-size: 14px;}
+			.subCon .right .title{height: 100px;line-height: 48px;border-bottom: 1px solid #ececec;}
+			.subCon .right .title div:first-child{font-size: 32px;}
+			.subCon .right .con{margin-top: 29px;line-height: 42px;font-size: 22px;color: #717171;}
+			.subCon .right .btn a{width: 158px;height: 58px;font-size: 24px;line-height: 60px;text-align: center;}
+		    .more{display: none;}
+		    .wrap .btn{font-size: 26px;width: 200px;height: 56px;line-height: 56px;margin: 40px auto;}
+		    .footer .contact{display: none;}
+		    .footer .copyright{float: none;text-align: center;margin: 0 auto;}
+			/*固定视口的按钮*/
+			.fixed{display: block;background: #fff;position: fixed;bottom: 0;width: 750px;}
+			.fixed .btn{float: left;margin-left: 20px;width: 120px;height: 20px;padding: 15px 30px;border: 1px solid #c19b76;border-radius: 6px;
+				font-size: 20px;color: #caa070;}
+			.fixed .btn:first-child{margin-left: 0;}
+			/*固定按钮的小图标*/
+			.fixed i{float: left;width: 20px;height: 20px;background: url(../image/fixed.png) no-repeat;}
+			.fixed .btns{width: 586px;height: 52px;margin: 20px auto;}
+			/*按钮里的文字*/
+			.fixed .btn span{float: left;margin-left: 5px;display: inline-block;
+				line-height: 20px;}
+			/*每个小图标的显示*/
+			.fixed .btn1 i{background-position: 0 0;}
+			.fixed .btn2 i{background-position: -20px 0;}
+			.fixed .btn3 i{background-position: -40px 0;}
+		}  
+	</style>
+</head>
+<body>
+	<!-- 顶部导航栏 -->
+	<div class="head">
+		<div class="center">
+			<div class="left">
+				<img src="image/logo.png" alt="logo" />
+			</div>
+			<div  class="right">
+				<ul>
+					<li class="selected">首页</li>
+					<li>关于我们</li>
+					<li>我们的课程</li>
+					<li>活动园地</li>
+					<li>新闻快递</li>
+				</ul>
+				<div class="active"></div>
+				<!-- 屏幕小于750的那个导航栏 -->
+				<div class="pop">
+					<div class="menu">
+						<div class="icon">
+							<i class="icon_close"></i>
+						</div>
+						<ul>
+							<li>首页</li>
+							<li>关于我们</li>
+							<li>我们的课程</li>
+							<li>活动园地</li>
+							<li>新闻快递</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- banner轮播图 -->
+	<div class="bannerbox">
+        <div class="banner">
+            <img src="image/banner.jpg" />
+        </div>
+        <div class="center">
+        	<div class="title">THERE IS NO BETTER WAY TO LEARN</div>
+        	<div class="con">
+        		<a href="">青少年英语</a>
+        		<span>/</span>
+        		<a href="">成人英语</a>
+        	</div>
+        	<div class="btn">查看详情</div>
+        </div>
+    </div>  
+    <!-- 我们的课程 -->
+    <div class="course">
+    	<div class="center">
+	    	<div class="top">
+	    		<p>我们的课程</p>
+	    		<p>OUR&nbsp;&nbsp;&nbsp;COURSE</p>
+	    	</div>
+	    	<div class="describe">
+	    		<!-- 课程1 -->
+	    		<div class="subCon">
+	    			<div class="left">
+	    				<img src="image/card1.jpg" alt="" />
+	    			</div>
+	    			<div class="right">
+	    				<div class="title">
+	    					<div>青少儿英语</div>
+	    					<div>ENGLISH&nbsp;&nbsp;FOR&nbsp;&nbsp;KIDS</div>
+	    				</div>
+	    				<div class="con">
+	    					青少儿英语依据当今青少儿的心理特点，由教研团队及行业资深中外教合作研发出青少儿专属课程与...
+	    				</div>
+	    				<div class="btn selected"><a href="">现在预约</a></div>
+	    			</div>
+	    		</div>
+	    		<!-- 课程2 -->
+	    		<div class="subCon">
+	    			<div class="left">
+	    				<img src="image/card2.jpg" alt="" />
+	    			</div>
+	    			<div class="right">
+	    				<div class="title">
+	    					<div>TOM少儿英语</div>
+	    					<div>ENGLISH&nbsp;&nbsp;FOR&nbsp;&nbsp;KIDS</div>
+	    				</div>
+	    				<div class="con">
+	    					青少儿英语依据当今青少儿的心理特点，由教研团队及行业资深中外教合作研发出青少儿专属课程与...
+	    				</div>
+	    				<div class="btn"><a href="">现在预约</a></div>
+	    			</div>
+	    		</div>
+	    		<!-- 课程3 -->
+	    		<div class="subCon">
+	    			<div class="left">
+	    				<img src="image/card1.jpg" alt="" />
+	    			</div>
+	    			<div class="right">
+	    				<div class="title">
+	    					<div>青少儿英语</div>
+	    					<div>ENGLISH&nbsp;&nbsp;FOR&nbsp;&nbsp;KIDS</div>
+	    				</div>
+	    				<div class="con">
+	    					青少儿英语依据当今青少儿的心理特点，由教研团队及行业资深中外教合作研发出青少儿专属课程与...
+	    				</div>
+	    				<div class="btn"><a href="">现在预约</a></div>
+	    			</div>
+	    		</div>
+	    		<!-- 课程4 -->
+	    		<div class="subCon">
+	    			<div class="left">
+	    				<img src="image/card2.jpg" alt="" />
+	    			</div>
+	    			<div class="right">
+	    				<div class="title">
+	    					<div>TOM少儿英语</div>
+	    					<div>ENGLISH&nbsp;&nbsp;FOR&nbsp;&nbsp;KIDS</div>
+	    				</div>
+	    				<div class="con">
+	    					青少儿英语依据当今青少儿的心理特点，由教研团队及行业资深中外教合作研发出青少儿专属课程与...
+	    				</div>
+	    				<div class="btn"><a href="">现在预约</a></div>
+	    			</div>
+	    		</div>
+	    	</div>
+	    	<div class="more clear"><a href="">加载更多&nbsp;&nbsp;></a></div>
+    	</div>
+    </div>
+    <!-- 学员专区 -->
+	<div class="wrap">
+        <div class="child">
+            <img src="image/advertise.jpg" />
+        </div>
+        <div class="center">
+        	<div class="title">
+        		<p>学员专区</p>
+        		<p> MEMBER AREA</p>
+        	</div>
+        	<div class="con">在学员专区您可以找到最新的学习资料，了解最新的课程规划，班级活动的预约<br />认识更多朋友，探索更美好的世界！</div>
+        	<div class="btn">了解更多</div>
+        </div>
+    </div>  
+    <!-- 固定在底部的悬浮框 -->
+    <div class="fixed">
+    	<div class="center">
+    		<div class="btns">
+	    		<div class="btn btn1"><i></i><span>现在预约</span></div>
+	    		<div class="btn btn2"><i></i><span>咨询电话</span></div>
+	    		<div class="btn btn3"><i></i><span>在线咨询</span></div>
+    		</div>
+    	</div>
+    </div>
+    <!-- 底部版权声明 -->
+    <div class="footer">
+    	<div class="center">
+    		<div class="copyright">版权所有©2009 XXXXXXXX英语培训学校&nbsp;&nbsp;京ICP备99898978号</div>
+    		<div class="contact">
+    			<div class="service"><i></i><a href="">在线客服</a></div>
+    			<div class="phone"><i></i>400-676-6083</div>
+    		</div>
+    	</div>
+    </div>
+</body>
+</html>

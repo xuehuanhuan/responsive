@@ -1,0 +1,54 @@
+.center{
+	margin: 0 auto;
+	width: 1120px;
+}
+.head{
+	height: 108px;
+	line-height: 108px;
+	font-size: 16px;
+	color: #333;
+}
+/*logo*/
+.head .left{
+	float: left;
+}
+.head .left img{
+	margin-top: 33px;
+}
+.head .right{
+	float: right;
+	position: relative;
+}
+.head .right li{
+	cursor: pointer;
+	float: left;
+	margin: 0 31px;
+}
+/*把第一个和最后一个的margin进行修改*/
+.head .right li:last-child{
+	margin-right: 0;
+}
+.head .right li:first-child{
+	margin-left: 0;
+}
+/*导航栏被选中的样式*/
+.head .right li.selected{
+	color: #cd995a;
+}
+/*头部导航栏的下划线*/
+.active{
+	position: absolute;
+	top: 77px;
+	width: 32px;
+	height: 2px;
+	background: #cd995a;
+	-webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+    -webkit-transition: -webkit-transform .3s ease;
+    transition: -webkit-transform .3s ease;
+    -moz-transition: transform .3s ease,-moz-transform .3s ease;
+    transition: transform .3s ease;
+    transition: transform .3s ease,-webkit-transform .3s ease,-moz-transform .3s ease;
+}
